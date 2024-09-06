@@ -1,6 +1,24 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import {Image} from 'astro:assets';
+import _6090022 from "../assets/images/_6090022.png.jpeg.png";
+import agfa_genavendeligt_2_5 from "../assets/images/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg";
+import agfa_genanvendeligt_2_7 from "../assets/images/agfa-genanvendeligt-kamera-35mm-film-2-7.jpg";
+import amarminoen_12 from "../assets/images/amarminoen-med-et-agfa-le-box-12.jpg";
+import anamorfiske from "../assets/images/anamorfiske-landskaber-amager-faelled-4.jpg.png";
+import oppefra from "../assets/images/kobenhavnerbilleder_oppefra.jpg.png";
+import venstre from "../assets/images/kobenhavnerbilleder_aaben_venstre.jpg.png";
+import kobenhavn_sten from "../assets/images/kobenhavnerbilleder-sten-simons.jpg.png";
+import nikkormat_6 from "../assets/images/nikkormat-ft2-orestad-c-6.jpg.png";
+import nikkormat_2 from "../assets/images/nikkormat-ft2-remiseparken-2.jpg.png";
+import orestad_8 from "../assets/images/orestad-til-islands-brygge-pentax-auto-110-8.jpg.png";
+import orestad_14 from "../assets/images/orestad-til-islands-brygge-pentax-auto-110-14.jpg.png";
+import orestad_16 from "../assets/images/orestad-til-islands-brygge-pentax-auto-110-16.jpg.png";
+import orestad_17 from "../assets/images/orestad-til-islands-brygge-pentax-auto-110-17.jpg.png";
+import orestad_19 from "../assets/images/orestad-til-islands-brygge-pentax-auto-110-19.jpg.png";
+import sten from "../assets/images/sten_simons.jpg.png";
+
 ---
 <MainLayout title="Titel">
 	<article>
@@ -8,13 +26,15 @@ import Button from '../components/Button.astro';
 
 			<!--Venstre kolonne: Billede-->
 			<div class="col-span-2 p-0 overflow-hidden">
-				<img 
-				class="w-full h-full object-cover hover:scale-105"
-				src="/src/assets/images/kobenhavnerbilleder_aaben_venstre.jpg.png" alt="Københavnerbilleder"/>
+				<Image 
+				src={venstre}
+				alt="Københavnerbilleder"/
+				class="w-full h-full object-cover hover:scale-105">
+			</Image>
 			</div>
 
 			<!--Højre kolonne: Beskrivelse af bog-->
-			<div class="space-y-4">
+			<div id="københavnerbilleder" class="space-y-4">
 				<h1 class="text-3xl lg:text-4xl font-semibold mb-10 leading-7">Københavnerbilleder - En guide til hipster foto</h1>
 				<h2 class="text-2xl font-small text-red-600 mt-5 mb-8">Af Sten Simons</h2>
 				<p class="col-start-2 col-span-1 text-left mb-5 leading-6">Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
@@ -36,18 +56,30 @@ import Button from '../components/Button.astro';
 	<!--3 billeder af bogen-->
 <section class="grid sm:grid-cols-3 p-3">
     <div class="grid justify-items-center overflow-hidden">
-        <img class="p-4 transitaion hover:scale-105" src="/src/assets/images/kobenhavnerbilleder-sten-simons.jpg.png"/>
+		<Image 
+				src={kobenhavn_sten}
+				alt="Københavnerbilleder"/
+				class="p-4 transitaion hover:scale-105">
+		</Image>
     </div>
     <div class="grid justify-items-center overflow-hidden">
-        <img class="p-4 transitaion hover:scale-105" src="/src/assets/images/kobenhavnerbilleder_oppefra.jpg.png"/>
+		<Image 
+		src={oppefra}
+		alt="Københavnerbilleder"/
+		class="p-4 transitaion hover:scale-105">
+	</Image>
     </div>
     <div class="grid justify-items-center overflow-hidden">
-        <img class="p-4 transitaion hover:scale-105" src="/src/assets/images/kobenhavnerbilleder_aaben_venstre.jpg.png"/>
+		<Image 
+		src={venstre}
+		alt="Københavnerbilleder"/
+		class="p-4 transitaion hover:scale-105">
+	</Image>
     </div>
-</section>
+	</section>
 
 	<!--Beskrivelse af bogens kapitler-->
-	<section class="mt-0 px-8 py-4" id="bogens_kaptiler">
+	<section class="mt-0 px-8 py-4" id="bogens_indhold">
 		<h2 class="text-4xl font-bold mb-8">Bogens kapitler</h2>
 		<div class="grid grid-cols-1 lg:grid-cols-2 mx-auto mt-4 gap-8">
 		<article class="prose">
@@ -175,54 +207,77 @@ import Button from '../components/Button.astro';
 		<h2 class="text-3xl lg:text-4xl font-semibold mb-5">Galleri</h2>
 		<div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
 
-			<img class="w-full aspect-[2/2] object-cover"
-			src="/src/assets/images/anamorfiske-landskaber-amager-faelled-4.jpg.png"
-			alt=""
-			/>
-			<img class="w-full aspect-[2/2] object-cover"
-			src="/src/assets/images/_6090022.png.jpeg.png"
-			alt=""
-			/>
-			<img class="w-full aspect-[2/2] object-cover"
-			src="/src/assets/images/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg"
-			alt=""
-			/>
-			<img class="w-full aspect-[2/2] object-cover"
-			src="/src/assets/images/amarminoen-med-et-agfa-le-box-12.jpg"
-			alt=""
-			/>
-			<img class="w-full aspect-[2/2] object-cover"
-			src="/src/assets/images/nikkormat-ft2-orestad-c-6.jpg.png"
-			alt=""
-			/>
-			<img class="w-full aspect-[2/2] object-cover"
-			src="/src/assets/images/agfa-genanvendeligt-kamera-35mm-film-2-7.jpg"
-			alt=""
-			/>
-			<img class="w-full aspect-[2/2] object-cover"
-			src="/src/assets/images/orestad-til-islands-brygge-pentax-auto-110-8.jpg.png"
-			alt=""
-			/>
-			<img class="w-full aspect-[2/2] object-cover"
-			src="/src/assets/images/orestad-til-islands-brygge-pentax-auto-110-14.jpg.png"
-			alt=""
-			/>
-			<img class="w-full aspect-[2/2] object-cover"
-			src="/src/assets/images/orestad-til-islands-brygge-pentax-auto-110-16.jpg.png"
-			alt=""
-			/>
-			<img class="w-full aspect-[2/2] object-cover"
-			src="/src/assets/images/orestad-til-islands-brygge-pentax-auto-110-17.jpg.png"
-			alt=""
-			/>
-			<img class="w-full aspect-[2/2] object-cover"
-			src="/src/assets/images/orestad-til-islands-brygge-pentax-auto-110-19.jpg.png"
-			alt=""
-			/>
-			<img class="w-full aspect-[2/2] object-cover"
-			src="/src/assets/images/nikkormat-ft2-remiseparken-2.jpg.png"
-			alt=""
-			/>
+		<Image 
+		src={anamorfiske}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover">
+		</Image>
+
+		<Image 
+		src={_6090022}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover">
+		</Image>
+
+		<Image 
+		src={agfa_genavendeligt_2_5}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover">
+		</Image>
+
+		<Image 
+		src={amarminoen_12}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover">
+		</Image>
+
+		<Image 
+		src={nikkormat_6}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover">
+		</Image>
+
+		<Image 
+		src={agfa_genanvendeligt_2_7}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover">
+		</Image>
+
+		<Image 
+		src={orestad_8}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover">
+		</Image>
+
+		<Image 
+		src={orestad_14}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover">
+		</Image>
+
+		<Image 
+		src={orestad_16}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover">
+		</Image>
+
+		<Image 
+		src={orestad_17}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover">
+		</Image>
+
+		<Image 
+		src={orestad_19}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover">
+		</Image>
+
+		<Image 
+		src={nikkormat_2}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover">
+		</Image>
 	</section>
 
 	<!-- Om forfatteren-->
@@ -231,9 +286,12 @@ import Button from '../components/Button.astro';
 		<div class="grid gap-5 lg:grid-cols-2 lg:gap-8">
 
 		<!-- Billedet -->
-		<img
-		class="w-full aspect-[2/2] object-cover object-[0_-170px]"
-		src="../src/assets/images/sten_simons.jpg.png"alt=""/>
+		<Image 
+		src={sten}
+		alt="Københavnerbilleder"/
+		class="w-full aspect-[2/2] object-cover object-[0_-170px]">
+		</Image>
+
 
 	<!-- Beskrivelse af forfatter -->
 		<div class="flex flex-col gap-3 text-black leading-6">
@@ -252,7 +310,7 @@ import Button from '../components/Button.astro';
     <!-- Venstre kolonne: Form -->
     <div class="p-4 flex justify-center">
         <form class="text-black bg-white shadow-lg custom-red-shadow  max-w-md w-full p-10 mb-12">
-            <h2 class="text-2xl lg:text-4xl font-semibold mb-10 text-left">Køb bogen her</h2>
+            <h2 id="køb_nu" class="text-2xl lg:text-4xl font-semibold mb-10 text-left">Køb bogen her</h2>
             
             <!-- Antal -->
             <div class="mb-5 flex items-center">
@@ -319,9 +377,12 @@ import Button from '../components/Button.astro';
 
     <!-- Højre kolonne: Billede -->
     <div class="flex justify-center h-full overflow-hidden">
-        <img src="/src/assets/images/kobenhavnerbilleder-sten-simons.jpg.png" alt="København" class="max-h-full h-5/6 shadow-lg object-cover mt-11 mr-20 hover:scale-105">
+		<Image 
+		src={kobenhavn_sten}
+		alt="Københavnerbilleder"/
+		class="max-h-full h-5/6 shadow-lg object-cover mt-11 mr-20 hover:scale-105">
+		</Image>
     </div>
-	</div>
 </MainLayout>
 
 <style>
