@@ -1,0 +1,28 @@
+---
+const { variant = "primary", size = "small" } = Astro.props;
+
+const variantClasses = {
+  "primary":"text-white bg-black border border-white py-4 px-20 mt-5 mb-5 hover:bg-gray-800 hover:bounce-top",
+  "secondary": "text-red-800 bg-white border border-red-800 py-2 px-4 hover:bg-gray-800 hover:bounce-top"};
+
+const sizeClasses = {
+  "large": "px-8 py-4 text-lg",
+  "medium": "px-6 py-3 text-base",
+  "small": "px-10 py-2 text-sm"
+};
+
+const buttonStyling = `${variantClasses[variant]} ${sizeClasses[size]}`;
+---
+<button class={buttonStyling}>
+    <slot/> <!-- Dette gør det muligt at indsætte indhold mellem knap-tags i HTML -->
+  </button>
+
+  <!--
+<Button variant="primary" size="small">Lille Primær</Button>
+<Button variant="primary" size="medium">Mellem Primær</Button>
+<Button variant="primary" size="large">Stor Primær</Button>
+
+<Button variant="secondary" size="small">Lille Sekundær</Button>
+<Button variant="secondary" size="medium">Mellem Sekundær</Button>
+<Button variant="secondary" size="large">Stor Sekundær</Button>
+  -->

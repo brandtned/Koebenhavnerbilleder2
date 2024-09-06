@@ -1,0 +1,56 @@
+---
+import Link from "../components/Link.astro";
+---
+<footer class="w-full bg-white text-black p-5">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <!-- Første kolonne -->
+            <div>
+                <h3 class="font-bold text-lg">Københavnerbilleder</h3>
+                <ul class="space-y-2 font-light leading-6 mt-5 text-sm">
+                    <li>Forfatter: Sten Simons</li>
+                    <li>Antal sider: 344</li>
+                    <li>Forlag: Mellem linjerne</li>
+                    <li>ISBN: 987-6-987654-32-1</li>
+                    <li>Pris: 399,-</li>
+                </ul>
+            </div>
+
+            <!-- Anden kolonne -->
+            <div>
+                <h3 class="font-bold text-lg">Bogens indhold</h3>
+                <ul class="space-y-2 font-light leading-6 mt-5 text-sm">
+                    <li>Kapitel 1 - Intro til street fotos</li>
+                    <li>Kapitel 2 - Om at skyde street</li>
+                    <li>Kapitel 3 - Om at finde det rette motiv</li>
+                    <li>Kapitel 4 - Digital street foto</li>
+                    <li>Kapitel 5 - Analog street foto</li>
+                    <li>Kapitel 6 - Om at skyde sort/hvid</li>
+                    <li>Kapitel 7 - Kreative teknikker</li>
+                    <li>Kapitel 8 - Kom helt tæt på!</li>
+                </ul>
+            </div>
+
+            <!-- Tredje kolonne -->
+            <div>
+                <h3 class="font-bold text-lg">Forfatteren</h3>
+                <ul class="space-y-2 font-light leading-6 mt-5 text-sm">
+                    <li>Sten Simons</li>
+                    <li>Dansk fotograf</li>
+                    <li>Debutbog “Ungdomsdruk - pinlige billeder fra nattelivet”</li>
+                    <li>Nu aktuel med “Københavnerbilleder - En guide til hipster foto”</li>
+                    <div class="mt-5">
+                    <li class="text-white text-center no-underline bg-red-700 border border-white py-2 px-6 text-xs hover:bg-red-100"><Link href="#">Køb bogen her</Link></li>
+                </div>
+                </ul>
+                </ul>
+            </div>
+
+            <!-- Fjerde kolonne - Logo -->
+            <div class="flex justify-center items-center">
+                <img src="/src/assets/images/logo.png" alt="Logo" class="max-w-40">
+            </div>
+        </div>
+    </div>
+</footer>
+  
